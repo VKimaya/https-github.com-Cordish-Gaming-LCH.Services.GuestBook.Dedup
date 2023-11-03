@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <UserSecretsId>dotnet-LCH.Services.GuestBook.Dedup-59C64197-B8E5-4F47-AA57-DDA0170EA95D</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LCH.Services.Logging" Version="1.0.28" />
+    <PackageReference Include="LCH.Services.Models" Version="1.1.332" />
+    <PackageReference Include="LCH.Services.Mq" Version="1.0.30" />
+    <PackageReference Include="LCH.Services.Utilities" Version="1.0.28" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="6.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+  </ItemGroup>
+</Project>

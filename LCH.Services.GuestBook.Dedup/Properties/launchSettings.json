@@ -1,0 +1,10 @@
+﻿{
+  "profiles": {
+    "LCH.Services.GuestBook.Dedup": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

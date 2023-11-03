@@ -1,0 +1,32 @@
+﻿{
+  "Serilog": {
+    "Using": [ "Serilog.Sinks.File" ],
+    "WriteTo": [
+      {
+        "Name": "File",
+        "Args": {
+          "path": "C:\\Services\\Logs\\guestbook-Dedup.log",
+          "rollingInterval": "Hour",
+          "outputTemplate": "{Timestamp:o} [{Level:u3}] ({Application}/{MachineName}/{ThreadId}) {Message}{NewLine}{Exception}",
+          "restrictedToMinimumLevel": "Debug",
+          "fileSizeLimitBytes": 1000000,
+          "rollOnFileSizeLimit": true,
+          "retainedFileCountLimit": 50
+        }
+      },
+      {
+        "Name": "File",
+        "Args": {
+          "path": "C:\\Services\\Logs\\guestbook-Dedup.log",
+          "rollingInterval": "Day",
+          "outputTemplate": "{Timestamp:o} [{Level:u3}] ({Application}/{MachineName}/{ThreadId}) {Message}{NewLine}{Exception}",
+          "restrictedToMinimumLevel": "Error"
+        }
+      }
+    ],
+    "Enrich": [ "FromLogContext", "WithMachineName", "WithThreadId" ],
+    "Properties": {
+      "Application": "LCH.Services.GuestBook.Dedup"
+    }
+  }
+}
